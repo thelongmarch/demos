@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>双11红包雨</title>
+    <style>
+        .festival_tip {
+            visibility: hidden;
+            position: absolute;
+            left: -200px;
+            top: 215px;
+            z-index: 400;
+            width: 201px;
+            height: 48px;
+            background: url("plane.png") no-repeat left top;
+            animation: flyMove 1s steps(9) infinite;
+        }
+
+        .festival_tip.flySide {
+            transition: all 2s;
+            transform: translateX(1556.5px);
+        }
+
+        .festival_tip.flyIn {
+            transition: all 2s;
+            transform: translateX(1051.5px);
+        }
+
+        @keyframes flyMove {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: 0 -432px
+            }
+        }
+
+        .festival_tip .close {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+        }
+
+        /* rain */
+
+        
+        .couten {
+            position: absolute;
+            top: 215px;
+            left: 951.5px;
+            z-index: 20;
+        }
+
+        .couten li {
+            position: absolute;
+            width: 67px;
+            height: 101px;
+            background: url("red-packets.png");
+            opacity: 0;
+            transform: scale(0.3);
+            animation-duration: 6s;
+            animation-iteration-count: 1;
+            cursor: pointer;
+        }
+
+        .couten li.rain.stop {
+            animation-iteration-count: 0;
+        }
+
+        .couten li.rain {
+            animation-name: falling;
+        }
+
+        .couten li.rain:nth-of-type(2n) {
+            animation-name: falling2;
+        }
+
+        .couten li.rain:nth-of-type(3n) {
+            animation-name: falling3;
+        }
+
+        .couten li.rain:nth-of-type(4n) {
+            animation-name: falling4;
+        }
+
+        @keyframes falling {
+            from {
+                transform: translate3d(0, 0, 0) rotate(0deg) scale(0.3);
+                opacity: 1;
+            }
+            70% {
+                opacity: 1;
+            }
+            to {
+                transform: translate3d(-100px, 410px, 0) rotate(50deg) scale(1);
+                opacity: 0;
+            }
+        }
+
+        @keyframes falling2 {
+            from {
+                transform: translate3d(0, 0, 0) rotate(-20deg) scale(0.3);
+                opacity: 1;
+            }
+            70% {
+                opacity: 1;
+            }
+            to {
+                transform: translate3d(200px, 410px, 0) rotate(-60deg) scale(1);
+                opacity: 0;
+            }
+        }
+
+        @keyframes falling3 {
+            from {
+                transform: translate3d(0, 0, 0) rotate(20deg) scale(0.3);
+                opacity: 1;
+            }
+            70% {
+                opacity: 1;
+            }
+            to {
+                transform: translate3d(-400px, 410px, 0) rotate(70deg) scale(1);
+                opacity: 0;
+            }
+        }
+
+        @keyframes falling4 {
+            from {
+                transform: translate3d(0, 0, 0) rotate(-10deg) scale(0.3);
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            to {
+                transform: translate3d(300px, 410px, 0) rotate(-50deg) scale(1);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="festival_tip flyIn flySide" style="visibility: visible;">
+        <a class="link" href="https://s.click.taobao.com/t?e=m%3D2%26s%3DVamzwYPawQocQipKwQzePCperVdZeJviK7Vc7tFgwiFRAdhuF14FMWko%2FulVO7%2FYxq3IhSJN6GQD6MZ%2Bql29yIW%2FXPHWPSQpRyGdTPQeBxOhxi073Q%2B3hI7LAa3DUrM2zt5vEinufIVAFEHVckI7b445SxkPgGIgiBqx4AoGTRxNtT0rMxO3Gl7tq5jQc9hazOVMRxaE72YTjH0qj5aeMcQYGo%2FHVZIsUrCVaMJfhysIXzSzYpHMoScw7bYkGcYO7OFU%2BdPNzQ6QXEjWwy5smE%2FXOZIivcNKebdHxKf%2F1WkdgyZwhFLmf4BwEzfiK11ECo9LaohNfknLP4XO97Tuio%2BgRw6KoLAkxiXvDf8DaRs%3D"></a>
+        <a class="close">
+            <img src="close.png">
+        </a>
+    </div>
+    <ul class="couten">
+        <li class="li rain" style="animation-delay: 0s; animation-iteration-count: 2;"></li>
+        <li class="li rain" style="animation-delay: 0.3s; animation-iteration-count: 2;"></li>
+        <li class="li rain" style="animation-delay: 0.6s; animation-iteration-count: 2;"></li>
+        <li class="li rain" style="animation-delay: 0.9s; animation-iteration-count: 2;"></li>
+        <li class="li rain" style="animation-delay: 1.2s; animation-iteration-count: 2;"></li>
+        <li class="li rain" style="animation-delay: 1.5s; animation-iteration-count: 2;"></li>
+        <li class="li rain" style="animation-delay: 1.8s; animation-iteration-count: 2;"></li>
+        <li class="li rain" style="animation-delay: 2.1s; animation-iteration-count: 2;"></li>
+        <li class="li rain" style="animation-delay: 2.4s; animation-iteration-count: 2;"></li>
+        <li class="li rain" style="animation-delay: 2.7s; animation-iteration-count: 2;"></li>
+        <li class="li rain" style="animation-delay: 3s; animation-iteration-count: 2;"></li>
+        <li class="li rain" style="animation-delay: 3.3s; animation-iteration-count: 2;"></li>
+        <li class="li rain" style="animation-delay: 3.6s; animation-iteration-count: 2;"></li>
+        <li class="li rain" style="animation-delay: 3.9s; animation-iteration-count: 2;"></li>
+        <li class="li rain" style="animation-delay: 4.2s; animation-iteration-count: 2;"></li>
+        <li class="li rain" style="animation-delay: 4.5s; animation-iteration-count: 2;"></li>
+        <li class="li rain" style="animation-delay: 4.8s; animation-iteration-count: 2;"></li>
+        <li class="li rain" style="animation-delay: 5.1s; animation-iteration-count: 2; animation-play-state: running;"></li>
+        <li class="li rain" style="animation-delay: 5.4s; animation-iteration-count: 2; animation-play-state: running;"></li>
+        <li class="li rain" style="animation-delay: 5.7s; animation-iteration-count: 2;"></li>
+    </ul>
+</body>
+
+</html>
